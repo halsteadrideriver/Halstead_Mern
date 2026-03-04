@@ -131,4 +131,35 @@ arr.forEach((value,index,array) =>{
 console.log(arr);
 let jo = arr.join(' , ');
 console.log(jo);*/
+//for in loop: gives indexes of the elements.
+//let arr = [10,20,30,40];
+/*for(let ar in arr)
+{
+    console.log(ar + "->" + arr[ar]);
+}*/
+// for of loop: gives the elements itself
+/*for(let ar of arr)
+{
+    console.log(ar);
+}*/
+// multidimensional array:
+/*
+let arr = [
+    ["hals",25],["Andu",23],["Powell",23]
+]
 
+for(let i=0; i<arr.length;i++){
+    for(let j=0;j<arr[i].length;j++)
+    {
+        console.log(arr[i][j]);
+    }
+}*/
+
+//Copy and spread of array elements:
+arr = ['hals','andu','powell'];
+//arr2 = arr;  // passing the referance of the array arr to array arr2.
+//arr2 = arr.slice(0) // copying array through slice method.
+arr2 = [...arr]   //copying through speard operator[...]
+arr.push("JessyVAC");
+console.log(arr2);
+console.log(arr)
