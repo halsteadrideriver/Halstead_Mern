@@ -261,7 +261,7 @@ for(let key of k)
 }*/
 
 //This keyword: to access object properties inside itself.
-// empty this keyword gives windows object as output.
+// empty 'this' keyword gives windows object as output.
 /*
 var obj = {
     fname : "Hals",
