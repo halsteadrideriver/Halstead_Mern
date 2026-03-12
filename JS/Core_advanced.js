@@ -437,3 +437,32 @@ div(0,0);
 */
 
 // Fetch Api:
+
+// Example 1: with a text file.
+/*
+fetch('api_concept.txt').then(response=>
+{
+    if (!response.ok){
+        throw new Error("Error Occured.");  
+    }
+    return response.text();
+})
+.then(data => console.log(data))
+.catch(error => console.log(error));
+*/
+
+// Example 2: with api from internet.
+
+// fetch('https://jsonplaceholder.typicode.com/posts').then(response=>
+// {
+//     if (!response.ok){
+//         throw new Error("Error Occured.");  
+//     }
+//     return response.json();
+// })
+// .then(data => console.log(data.forEach(element => {
+//     console.log(element.title);
+// })))
+// .catch(error => console.log(error));
+
+
