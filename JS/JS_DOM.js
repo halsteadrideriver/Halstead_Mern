@@ -120,5 +120,11 @@ console.log(a);*/
 //     console.log(`${att.name} = ${att.value}`);
     
 // }
+// Popups:
+
+//alert("hello");
+//prompt("how are you?");
+//confirm("Are you ok?");
+
 
 

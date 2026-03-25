@@ -4,8 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+#container{
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+    position: relative;
+}
+#inside{
+    width: 50px;
+    height: 50px;
+    background-color: brown;
+    position:absolute;
+
+}
+body{
+    padding: 20px;
+    background-color: aqua;
+}
+div{
+    padding: 20px;
+    background-color: blue;
+    width: max-content;
+}
+span{
+    padding: 20px;
+    background-color: bisque;
+    display: block;
+}
+    </style>
 </head>
 <body>
-    
+    <!-- for button clicks , animations , event listeners-->
+    <!-- <div id="container" onmouseover="mouseover()" onmouseout="mouseout()">
+        <div id="inside">
+
+        </div>
+    </div>
+    <p><button onclick="myMove()">Click</button></p> -->
+     <!-- <br>
+     <button id="btn">event listner</button>
+    <script>
+        function myMove(){
+            let pos = 0;
+            const elem = document.getElementById("inside");
+            //console.log(typeof elem);
+            const id = setInterval(frame,100);
+            elem.style.backgroundColor = "black";
+            function frame(){
+                if (pos == 350){
+                    clearInterval(id);
+                }
+                pos++;
+                elem.style.top = pos+ 'px';
+                elem.style.left = pos+ 'px';
+            }
+        }
+        function mouseover()
+        {
+            var div1 = document.getElementById("container");
+            div1.style.backgroundColor = "green";
+        }
+        function mouseout()
+        {
+            var div2 = document.getElementById("container");
+            div2.style.backgroundColor = "red";
+        }
+    // event listner concept:
+        document.getElementById("btn").addEventListener('click',func); // any event can be added to the 'addEventListner' function.
+        function func()
+        {
+            var div3 = document.getElementById("container");
+            div3.style.backgroundColor = "white";
+        }
+
+    </script> -->
+    <!-- windows location. -->
+    <!-- <div id="loc"> </div>
+    <script>
+        let d = document.getElementById("loc");
+        //d.innerHTML = window.location.href; // get the O/P as "http://127.0.0.1:5500/index3.html"
+        //d.innerHTML = window.location.hostname; // get the hostname of the url.
+        //d.innerHTML = window.location.pathname; // get the path of the url.
+        //d.innerHTML  = window.location.assign("https://www.udemy.com") // redirects to the included url.
+
+
+    </script> -->
+
+    <!-- <script src="JS_DOM.js"></script>  for popups. -->
+     <!-- for bubbling concepts : means an event propagating from child to sibling or to Parent object. -->
+      <div>
+        <span>
+            <button>Click me!</button>
+        </span>
+      </div>
+      <!-- <script>
+        const body = document.getElementsByTagName('body')[0];
+        const div  = document.getElementsByTagName('div')[0];
+        const span = document.getElementsByTagName('span')[0];
+        const button = document.getElementsByTagName('button')[0];
+        body.addEventListener('click',()=>{
+            console.log("body event");
+        })
+        div.addEventListener('click',()=>{
+            console.log("div event");
+        })
+        span.addEventListener('click',()=>{
+            console.log("span event");
+        })
+        //button.addEventListener('click',()=>{
+        //    console.log("button event"); // when button is clicked in this situation the event listener bubbles up or propagates to the other parent objects i.e span , div, body  and acts as their eventlistener as well
+        //})
+
+        button.addEventListener('click',(event)=>{
+            event.stopPropagation(); // Stops the propogation to the other parent objects and acts the eventListener to the button object only.
+            console.log("button event");
+        })
+      </script> -->
+      <!-- Event delegation : minimizing the above code but same concept -->
+       <script>
+        let a = document.querySelector('div');
+        console.log(a.getBoundingClientRect()); // gets the dimensions of the particular object selected.
+        const div = document.getElementsByTagName('div')[0];
+        div.addEventListener('click',(event)=>{
+
+            if(event.target.tagName == 'BUTTON')
+            {
+                console.log("button event");
+            }
+            else if(event.target.tagName == 'SPAN')
+            {
+                console.log("SPAN event");
+            }
+            else{
+                console.log("DIV event");
+            }
+
+        });
+
+       </script>
 </body>
+
 </html>
