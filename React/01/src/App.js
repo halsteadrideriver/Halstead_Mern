@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-
+import './App.css'
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    let a = 3;
+    return(
+        // the JSX is the wrapper .
+            <div>  {/* this is wrapping the HTML into JSX*/}
+            {a+2} {/*this is how we ccan write Javascript in JSX.*/}
+        <h1 className='main'> Hii Buddy </h1>
+        <p style={{backgroundColor : "red", color:"white"}}> This is react class</p>
+        <p> This is the JSX format .</p>
+        <p> The things witten under the return </p>
+            </div>
+
+    )
 }
 
 export default App;
