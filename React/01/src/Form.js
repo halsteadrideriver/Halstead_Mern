@@ -22,7 +22,7 @@ const Form = () => {
     // Multiple States to single States function:
     const handleInput = (e) =>{
         const {name,value} = e.target;
-        setformData({...formData,[name]:value})
+        setformData({...formData,[name]:value}) // "..." -> spread operator . -> can be used to copy, update , merge the original arrays, strings, objects, etc.
     }
 
     const handleSubmit = (e)=> {

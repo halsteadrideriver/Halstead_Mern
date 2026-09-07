@@ -23,13 +23,32 @@ import './MobileList.css'
 // Components with props:
 // Props: a mechanism used to pass data from a parent component to a //child component. They are essentially inputs that make components //dynamic and reusable.
 
+// export default function MobileList(props){
+//     return(
+//         <div className="main">
+//             <img className="image" src={props.image}></img>
+//             <div>
+//                 <h2>{props.title}</h2>
+//                 <p>$ {props.price}</p>
+//                 <button>Save to Cart</button>
+//             </div>
+
+//         </div>
+//     )
+
+// }
+
+// Destructing : allows us to unpack values from arrays or props from their objects directly into distinct variables. 
+// Used for cleaner and more reusable code.
+
 export default function MobileList(props){
+    const {image,title,price} = props;
     return(
         <div className="main">
-            <img className="image" src={props.image}></img>
+            <img className="image" src={image}></img>
             <div>
-                <h2>{props.title}</h2>
-                <p>$ {props.price}</p>
+                <h2>{title}</h2>
+                <p>$ {price}</p>
                 <button>Save to Cart</button>
             </div>
 

@@ -1,6 +1,7 @@
 import React, { useState }  from "react";
 import datas from './Datas.json'
 
+// Hooks : 
 const Hooks = () => {
     // useState Eg1:
     // console.log(useState()); // The useState Output is an array of two . Its first index is element and second is the function 
@@ -27,7 +28,19 @@ const Hooks = () => {
     const [nData,setnData] = useState(datas);
     //console.log(datas[2].id);
     const handleremove = (itemID) => {
-        setnData(nData.filter(item => item.id !== itemID))
+        setnData(nData.filter(item => item.id !== itemID)) // creates a shallow array based on the logic included in the function.
+    }
+    const handleupdate = (itemID) => {
+        setnData(nData.map(items =>{
+            if(items.id === itemID)
+            {
+                return {name : "newName"}
+            }
+            else{
+                return items;
+
+            }
+    }))
     }
     return(
         <div>
@@ -39,6 +52,7 @@ const Hooks = () => {
 
                             {items.name}
                             <br/>
+                            <button onClick={() => handleupdate(items.id)}>Update</button>
                             <button onClick={() => handleremove(items.id)}>Remove</button>
 
                         </li>

@@ -6,6 +6,9 @@ const UseEffect = () => {
 
     useEffect(()=>{ // It is acted when any new effect is received or any new event is received 
         alert("We are in Useeffect.");
+        return()=>{ // Clean up return code.
+            console.log("Cleanup return code runs first before useEffect runs.")
+        }
     },[Clicked,count]) // We can specify the event or leave it blank for all the event listening.
     return(
         <div>

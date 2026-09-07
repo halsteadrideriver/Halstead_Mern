@@ -5,7 +5,8 @@ import ReactDOM from 'react-dom/client';
 // import Hooks from './Hooks.js'
 // import Form from './Form.js'
 // import UseEffect from './UseEffect';
-import Fetch from './Fetch.js'
+// import Fetch from './Fetch.js'
+import MultipleReturn from './multipleReturn';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,7 +16,8 @@ root.render(
     {/* <Hooks/> for Hooks.js */}
     {/* <Form/> for Form.js */}
     {/* <UseEffect/> for UseEffect.js */}
-    <Fetch/>
+    {/* <Fetch/> for Fetch.js*/}
+    <MultipleReturn/>
 
 
   </React.StrictMode>

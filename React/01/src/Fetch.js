@@ -12,7 +12,7 @@ const Fetch = () => {
         <ul>
             {
                 users.map(users =>{
-                    return <li key={users.id}>{users.login}</li>
+                    return <li key={users.id}><a href={users.html_url}>{users.login}</a></li>
                 })
             }
         </ul>
