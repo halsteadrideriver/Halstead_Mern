@@ -28,6 +28,7 @@ const Hooks = () => {
     const [nData,setnData] = useState(datas);
     //console.log(datas[2].id);
     const handleremove = (itemID) => {
+        console.log(itemID)
         setnData(nData.filter(item => item.id !== itemID)) // creates a shallow array based on the logic included in the function.
     }
     const handleupdate = (itemID) => {
